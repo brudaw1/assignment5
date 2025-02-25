@@ -23,6 +23,7 @@ public class ListTest {
 		List list = mock(List.class);
 		// This test fails because list.size() is supposed to return a specific value but we have not mocked it yet
 		// TODO: Make this test pass using "stub".
+		when(list.size()).thenReturn(10, 20);
 		assertEquals(10, list.size()); // First Call
 		assertEquals(20, list.size()); // Second Call
 	}
